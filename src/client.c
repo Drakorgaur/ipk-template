@@ -78,18 +78,6 @@ int main (int argc, const char * argv[]) {
     if (bytesrx < 0) 
       perror("ERROR in recvfrom");
 
-    // clear buff
-    bzero(buf, BUFSIZE);
-    // copy string to buffer
-    strcpy(buf, "SOLVE (+ 1 2)");
-    bytestx = send(client_socket, buf, strlen(buf), 0);
-    if (bytestx < 0)
-      perror("ERROR in sendto");
-
-    bytesrx = recv(client_socket, buf, BUFSIZE, 0);
-    if (bytesrx < 0)
-      perror("ERROR in recvfrom");
-
     printf("Echo from server: %s", buf);
         
     close(client_socket);
