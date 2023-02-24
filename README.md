@@ -7,6 +7,15 @@
 ```bash
 docker-compose up --build
 ```
+get docker container id
+```bash
+docker ps
+```
+connect to docker container
+```bash
+docker exec -it <container_id> /bin/bash
+```
+
 
 ## Requirements
 * [Docker](https://www.docker.com/)
