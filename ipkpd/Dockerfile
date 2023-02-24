@@ -17,4 +17,4 @@ COPY start.sh ./
 
 RUN chmod -R 777 ./ipkpd ./start.sh
 
-ENTRYPOINT ["/ipk/project1/start.sh"]
+ENTRYPOINT ["bash", "/ipk/project1/start.sh"]
